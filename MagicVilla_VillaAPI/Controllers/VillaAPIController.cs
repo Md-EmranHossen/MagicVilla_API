@@ -3,9 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MagicVilla_VillaAPI.Controllers
 {
+    [Route("api/VillaAPI")]
     [ApiController]
     public class VillaAPIController : ControllerBase
     {
+        [HttpGet]
         public IEnumerable<Villa> GetVillas()
         {
             return new List<Villa>
